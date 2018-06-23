@@ -22,5 +22,6 @@
     <color name="colorPrimaryDark">#1B5E20</color>
     <color name="colorAccent">#E040FB</color>
 
-    <color name="ltgray">#ffe0e0e0</color>
+    <color name="textColor">#000000</color>
+    <color name="textColorSecondary">#8c8c8c</color>
 </resources>
