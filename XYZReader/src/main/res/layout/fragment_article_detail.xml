@@ -1,90 +1,20 @@
-<com.example.xyzreader.ui.DrawInsetsFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/draw_insets_frame_layout"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.xyzreader.ui.ObservableScrollView
-        android:id="@+id/scrollview"
+    <include
+        layout="@layout/content_article_details"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <FrameLayout
-                android:id="@+id/photo_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/photo_placeholder">
-                <!--suppress AndroidLintContentDescription -->
-                <ImageView
-                    android:id="@+id/photo"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/detail_card_top_margin"
-                    android:adjustViewBounds="true"
-                    android:scaleType="centerCrop" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/detail_card_top_margin"
-                    android:background="@drawable/photo_background_protection" />
-
-            </FrameLayout>
-
-            <com.example.xyzreader.ui.MaxWidthLinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/detail_card_top_margin"
-                android:background="@android:color/white"
-                android:elevation="2dp"
-                android:maxWidth="@dimen/detail_card_max_width"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:id="@+id/meta_bar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:layout_marginBottom="@dimen/detail_metabar_vert_padding"
-                    android:background="#333"
-                    android:orientation="vertical"
-                    android:paddingBottom="@dimen/detail_metabar_vert_padding"
-                    android:paddingEnd="@dimen/detail_inner_horiz_margin"
-                    android:paddingStart="@dimen/detail_inner_horiz_margin">
-
-                    <TextView
-                        android:id="@+id/article_title"
-                        style="@style/articleDetailTitle"
-                        tools:text="Article Title" />
-
-                    <TextView
-                        android:id="@+id/article_byline"
-                        style="@style/articleDetailByLine"
-                        tools:text="date, by author" />
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/article_body"
-                    style="@style/articleDetailBody"
-                    tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae urna vel diam sagittis faucibus eu sit amet neque. Donec ac tristique odio. Donec faucibus orci lobortis blandit interdum. Duis sed blandit ex, et ornare enim. Aenean sit amet odio id elit mattis eleifend nec eu ante. Sed congue, lorem eget tempor auctor, quam neque pellentesque ligula, sit amet aliquet dolor sem quis arcu. Integer ullamcorper quam ac tempor pretium. Pellentesque eu sem vel elit suscipit dapibus." />
-
-            </com.example.xyzreader.ui.MaxWidthLinearLayout>
-        </FrameLayout>
-    </com.example.xyzreader.ui.ObservableScrollView>
+        android:layout_height="match_parent" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/share_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:elevation="@dimen/fab_elevation"
         android:src="@drawable/ic_share"
-        app:elevation="6dp"
-        app:fabSize="normal"
-        app:pressedTranslationZ="10dp" />
-
-</com.example.xyzreader.ui.DrawInsetsFrameLayout>
+        android:stateListAnimator="@anim/fab_state_list_anim" />
+</FrameLayout>
