@@ -23,42 +23,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/empty_detail" />
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/photo_background_protection"
-        app:layout_constraintBottom_toTopOf="@+id/guideline_article_image"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/article_byline"
-        style="?android:attr/textAppearanceSmall"
-        android:layout_width="wrap_content"
+    <include
+        layout="@layout/content_article_header"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="16dp"
-        android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/guideline_article_image"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="Jan 1, 1912 by JackLondon" />
-
-    <TextView
-        android:id="@+id/article_title"
-        style="?android:attr/textAppearanceLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="16dp"
-        android:fontFamily="sans-serif-condensed"
-        android:textColor="@android:color/white"
-        android:textSize="@dimen/detail_title_text_size"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/article_byline"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="The Scarlet Plague" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/article_body"
@@ -67,6 +37,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:paddingBottom="8dp"
         android:textColorLink="@color/colorAccent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
