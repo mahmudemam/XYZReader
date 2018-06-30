@@ -8,6 +8,8 @@
     <dimen name="fab_press_translation_z">6dp</dimen>
     <dimen name="fab_margin">24dp</dimen>
     <dimen name="app_bar_height">112dp</dimen>
+    <dimen name="appbar_height">300dp</dimen>
+    <dimen name="article_title_margin_start">48dp</dimen>
 
     <item name="guideline_article_header" format="float" type="dimen">0.3</item>
 
